@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>CmpE 282 Lab 1</title>
+		<link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+	</head>	
+	<body>
+	<script src="static/js/bootstrap.js"></script>	
+		<div class="container">
+			<hr>
+			<div class="row-fluid">
+				<div class="span2">
+					<p> <img class="img-responsive img-circle" src="static/img/Amazon-Store-Logo-small.gif" onClick="imageClick('/')" alt="" />
+				</div>
+				<div class="span4">
+					<br>					
+					<h2> CmpE 282 Lab 1</h2>
+				</div>
+			</div>
+			<div class="navbar">
+				<div class="navbar-inner">
+					<div class="container">
+						<ul class="nav">
+                			<li><a href="#">Products</a></li>
+						</ul>
+						<ul class="nav pull-right">
+		            		<li><a href="../otherPages/login-form.html">Login</a></li>
+	                		<li><a href="#">Contact</a></li>
+        	          	</ul>
+                	</div>
+	           </div>
+	        </div>
+				<div class="row">
+					<div class="span6">
+						<form method="post" action="/login" name="loginForm" class="form-horizontal">
+							<fieldset>
+							<!-- Form Name -->
+							<legend align="left">Login details</legend>
+							<!-- Text input-->
+							<div class="control-group">
+								<label class="control-label" for="emailid"></label>
+								<div class="controls">
+									<input id="emailid" name="emailid" type="text" placeholder="Enter your Email ID" class="input-medium">
+								</div>
+							</div>
+							<!-- Password input-->
+							<div class="control-group">
+								<label class="control-label" for="password"></label>
+								<div class="controls">
+									<input id="password" name="password" type="password" placeholder="Password" class="input-medium">
+								</div>
+							</div>
+							<!-- Button -->
+							<div class="control-group">
+								<label class="control-label" for="submitbtn"></label>
+								<div class="controls">
+									<button id="submitbtn" name="submitbtn" class="btn"  onclick="return validateLoginForm()" method="post" onblur="input_reset(this)">Submit</button>
+									<button id="clearbtn"  name="clearbtn" class="btn" onclick="input_reset(this)">Clear</button>
+								</div>
+							</div>
+							<!-- <!------------------------------------------------------------------------------------------ -->
+							<!-- < 			<!-- Button                                                                     -->
+							<!-- < 			<div class="control-group">                                                      >  -->
+							<!-- < 			  <label class="control-label" for="clearbtn"></label>                           >  -->
+							<!-- < 			  <div class="controls">                                                         >  -->
+							<!-- < 			    <button id="clearbtn" name="clearbtn" class="btn btn-default">Clear</button> >  -->
+							<!-- < 			  </div>                                                                         >  -->
+							<!-- < 			</div>                                                                           >  -->
+							<!-- <------------------------------------------------------------------------------------------- -->
+							</fieldset>
+						</form>
+					</div>
+					<div class="span4 rightspan">
+						<form name="loginForm1" class="form-horizontal">
+							<div class="row">
+								<br><br><br><br><br>
+								&nbsp;&nbsp;&nbsp;Not Registered ? <a href="../otherPages/register-form.html" class="btn">Sign Up</a> here
+								<br><br><br><br><br> <br><br>
+							</div>
+						</form>
+					</div>
+			 </div>
+		</div>
+		<script>
+		function input_focus(obj){
+			if ( obj.value == obj.defaultValue ){
+			obj.value = ""
+			}
+		}
+
+		function input_reset(obj){
+			obj.value = obj.defaultValue;
+		}
+		function imageClick(url) {
+		    window.location = url;
+		}
+
+		</script>
+	
+	</body>
+</html>
